@@ -12,13 +12,14 @@ window.onload = function () {
       let top = count * 780;
       var coutBanner = 0;
 
-    //   for (let i = (count - 1) * 780 + 10; i <= top; i++) {
-    //     coutBanner++;
-    //     setTimeout(() => {
-    //       ul.scrollTop = i;
-    //     }, coutBanner * 10);
-    //   }
+      //   for (let i = (count - 1) * 780 + 10; i <= top; i++) {
+      //     coutBanner++;
+      //     setTimeout(() => {
+      //       ul.scrollTop = i;
+      //     }, coutBanner * 10);
+      //   }
       ul.scrollTop = top;
     }
   }, 1000);
 };
+
