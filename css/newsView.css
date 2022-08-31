@@ -46,6 +46,19 @@
     position: absolute;
     border: 1px solid;
     width: 60%;
-    height: 600px;
+    height: 500px;
     top: 41%;
+    left: 20%;
+}
+#container>.con_left{
+    float: left;
+    border: solid 1px;
+    width: 39%;
+    height: 500px;
+}
+#container>.con_right{
+    float: left;
+    border: 1px solid;
+    width: 60%;
+    height: 500px;
 }
