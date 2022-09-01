@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/top.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/index.js"></script>
+    <script src="./js/vue.js"></script>
 </head>
 
 <body>
@@ -44,6 +45,33 @@
             <li></li>
         </ul>
     </div>
+
+    <div id="active">
+        <div>
+            <span>{{active}}</span>
+            <span>{{news}}</span>
+        </div>
+        <ul>
+            <li>
+                {{time1}}
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#active",
+            data: {
+                active:'厚溥动态',
+                news:'News',
+                time1: '2022-08-20',
+                time2:'',
+
+            },
+        });
+    </script>
 </body>
 
 </html>
