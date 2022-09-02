@@ -38,8 +38,9 @@
 }
 
 #active {
+    position: relative;
     width: 1700px;
-    height: 600px;
+    height: 450px;
     border: solid 1px;
     margin: auto;
     padding-left: 120px;
@@ -104,4 +105,42 @@
     margin-top: 50px;
     margin-left: 900px;
     /* background-color: #333; */
+}
+/* 按钮 */
+.btn{
+    position: absolute;
+    /* border: solid 1px; */
+    width: 130px;
+    height: 70px;
+    left: 1520px;
+    top: 70px;
+    padding: 10px 20px;
+}
+.btn button{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid;
+    font-size: 30px;
+    color: #761818;
+    font-weight: 100;
+}
+.btn button:nth-of-type(2){
+    margin-left: -5px;
+    background-color: #761818;
+    color: white;
+    border: #761818 1px;
+}
+.btn button:nth-of-type(1):hover{
+    background-color: rgb(230, 222, 222);
+    color: #8a3a3a;
+    border: 1px transparent solid;
+    transition:all 1.3s;
+
+}
+.btn button:nth-of-type(2):hover{
+    background-color: rgb(230, 222, 222);
+    color: #761818;
+    transition:all 1s;
 }
