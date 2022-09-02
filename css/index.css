@@ -37,11 +37,14 @@
     height: 25px;
 }
 
+
+
+/* 动态 */
 #active {
     position: relative;
     width: 1700px;
     height: 450px;
-    border: solid 1px;
+    /* border: solid 1px; */
     margin: auto;
     padding-left: 120px;
 }
@@ -106,8 +109,9 @@
     margin-left: 900px;
     /* background-color: #333; */
 }
+
 /* 按钮 */
-.btn{
+.btn {
     position: absolute;
     /* border: solid 1px; */
     width: 130px;
@@ -116,7 +120,8 @@
     top: 70px;
     padding: 10px 20px;
 }
-.btn button{
+
+.btn button {
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -126,21 +131,87 @@
     color: #761818;
     font-weight: 100;
 }
-.btn button:nth-of-type(2){
+
+.btn button:nth-of-type(2) {
     margin-left: -5px;
     background-color: #761818;
     color: white;
     border: #761818 1px;
 }
-.btn button:nth-of-type(1):hover{
+
+.btn button:nth-of-type(1):hover {
     background-color: rgb(230, 222, 222);
     color: #8a3a3a;
     border: 1px transparent solid;
-    transition:all 1.3s;
+    transition: all 1.3s;
 
 }
-.btn button:nth-of-type(2):hover{
+
+.btn button:nth-of-type(2):hover {
     background-color: rgb(230, 222, 222);
     color: #761818;
-    transition:all 1s;
+    transition: all 1s;
+}
+
+/* 解决方案 */
+.solution {
+    /* border: solid 1px; */
+    height: 724px;
+    width: 1900px;
+}
+
+.solutionimg {
+    width: 710px;
+    height: 724px;
+    float: left;
+}
+
+.sol {
+    /* border: solid 1px; */
+    float: left;
+    height: 200px;
+    width: 880px;
+    margin-top: 274px;
+}
+
+.sol li {
+    /* border: solid 1px; */
+    width: 204px;
+    margin-top: 50px;
+    height: 100px;
+    float: left;
+}
+
+.sol li span {
+    /* border: solid 1px; */
+    display: block;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sol li span:nth-of-type(1) {
+    line-height: 40px;
+    height: 60px;
+    color: #761818;
+}
+
+.sol li span:nth-of-type(2) {
+    height: 22px;
+    border-right: #333 2px solid;
+    /* padding-left: 50px; */
+}
+
+#lastspan {
+    border: none;
+}
+.point2{
+    width:22px;
+    height: 22px;
+    position: relative;
+    left: 730px;
+    top: 678px;
+    cursor: pointer;
+    border-radius:50%;
+    background-color: #491a16;
 }
