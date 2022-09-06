@@ -1,0 +1,133 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#news{
+    width: 100%;
+    height: 102px;
+    margin-top: -20px;
+    position: absolute;
+}
+#news>img{
+    width: 96%;
+    margin-left: 2%;
+}
+#nav{
+    position: absolute;
+    width: 96%;
+    height: 100PX;
+    margin-left: 2%;
+    border-bottom: #E1E1E1 solid 2px;
+    top: 28%;
+}
+#nav>a{
+    position: relative;
+    float: left;
+    top: 0px;
+    left: 14.5%;
+    font-size: 15px;
+    width: 102px;
+    text-align: center;
+    height: 96%;
+    line-height: 110px;
+    font-size: 13.5px;
+}
+.navRight{
+    border-bottom: #761818 solid 3px;
+    color: #303133;
+}
+.navLeft{
+    color: #909399;
+}
+.navLeft:hover{
+    color: #303133;
+}
+#container{
+    position: relative;
+    top: 192px;
+    width: 885px;
+    height: 600px;
+    left: 390px;
+    padding-top: 60px;
+    border-right: 1px solid #e1e1e1;
+}
+.body{
+    width: 885px;
+    height: 180px;
+    margin-bottom: 26px;
+}
+.body_img{
+    width: 330px;
+    height: 180px;
+    float: left;
+    cursor: pointer;
+}
+.body_text{
+    width: 444px;
+    height: 180px;
+    float: left;
+    cursor: pointer;
+    border-bottom: 1px solid #ecf0f5;
+}
+.body_text_one{
+    background-color: #ecf0f5;
+}
+.body_text:hover{
+    background-color: #ecf0f5;
+}
+.body_img>img{
+    width: 100%;
+    height: 100%;
+}
+.body_text_time{
+    margin-top: 17px;
+    margin-left: 65px;
+    font-family: STXihei;
+    font-size: 20px;
+    color: #4b617b;
+}
+.body_text_time>span{
+    display: block;
+    width: 5px;
+    height: 15px;
+    background-color: #761818;
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.body_text_publisher{
+    font-family: STXihei;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 65px;
+    margin-top: 15px;
+    color: #4b617b;
+}
+.body_text_content{
+    width: 330px;
+    height: 25px;
+    font-family: STXihei;
+    font-size: 18px;
+    color: #112342;
+    margin-left: 65px;
+    margin-top: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.body_text_img{
+    width: 49px;
+    height: 49px;
+    background-color: #ecf0f5;
+    float: right;
+    margin-top: 14px;
+}
+.body_text_img>img{
+    cursor: pointer;
+    width: 16px;
+    float: right;
+    margin-top: 17px;
+    margin-right: 17px;
+}
