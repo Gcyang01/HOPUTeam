@@ -60,6 +60,7 @@
     width: 330px;
     height: 180px;
     float: left;
+    cursor: pointer;
 }
 .body_text{
     width: 444px;
