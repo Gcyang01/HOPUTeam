@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/bottom.css">
     <script src="./js/index.js"></script>
     <script src="./js/vue.js"></script>
+    <script src="./js/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+    <script src="./js/layer/layer.js"></script>
 </head>
 
 <body>
@@ -81,8 +83,9 @@
 
             </div>
             <div class="btn">
-                <button> < </button>
-                <button> > </button>
+                <button>
+                    < </button>
+                        <button> > </button>
             </div>
         </ul>
     </div>
@@ -125,7 +128,7 @@
             <li><img src="./img/inedximg/whgydx.png" alt=""></li>
             <li><img src="./img/inedximg/jdwl.png" alt=""></li>
             <li><img src="./img/inedximg/cjdx.png" alt=""></li>
-            
+
             <li><img src="./img/inedximg/whncsyyh.png" alt=""></li>
             <li><img src="./img/inedximg/whzyjsxy.png" alt=""></li>
             <li><img src="./img/inedximg/gzpa.png" alt=""></li>
@@ -134,10 +137,11 @@
             <li><img src="./img/inedximg/tx.png" alt=""></li>
 
         </ul>
-            <div class="btn">
-                <button> < </button>
-                <button> > </button>
-            </div>
+        <div class="btn">
+            <button>
+                < </button>
+                    <button> > </button>
+        </div>
 
         <div class="more">
             <div class="more_text">
@@ -146,7 +150,32 @@
             </div>
         </div>
     </div>
+    <!-- 联系我们 -->
+    <div class="compony">
+        <div class="partner_text lianxi">
+            <span>联系我们</span>
+            <span>Company Address</span>
+        </div>
+        <div class="compony_img">
+            <img src="./img/inedximg/map.220625b8.png" alt="">
+        </div>
+        <div class="map">
+            <ul class="map_ul">
+                <li onclick="addMap1()">
+                    <img src="./img/inedximg/dian.png" alt="">
+                    <p>湖北<span class="dian">·</span>武汉</span>
+                    <p> 洪山区关山大道特1号光谷软件园D8栋 </span>
+                </li>
+                <li onclick="addMap2()">
+                    <img src="./img/inedximg/dian.png" alt="">
+                    <p>湖北<span class="dian">·</span>武汉</span>
+                    <p> 东湖高新开发区春和路花山软件新城二期B13栋</span>
+                </li>
 
+            </ul>
+            <div id="map"></div>
+        </div>
+    </div>
 
 
 
@@ -231,6 +260,28 @@
 
             },
         });
+
+        // 地图1
+        function addMap1() {
+            layer.open({
+            	type:2,
+            	title:'地图',
+            	maxmin:false,
+            	shadeClose:true,
+            	area:['1000px','500px'],
+            	content:'map.html'
+            });
+        }
+        function addMap2() {
+            layer.open({
+            	type:2,
+            	title:'地图',
+            	maxmin:false,
+            	shadeClose:true,
+            	area:['1000px','500px'],
+            	content:'map2.html'
+            });
+        }
     </script>
 </body>
 
