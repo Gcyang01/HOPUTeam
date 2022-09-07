@@ -84,6 +84,9 @@
     height: 72px;
 
 }
+.lis{
+    display: none;
+}
 
 .news li div:nth-of-type(1) {
     width: 200px;
@@ -275,6 +278,9 @@
     width: 198px;
     height: 116px;
     animation: myFilter 2s ease 1;
+}
+.imglis{
+    display: none;
 }
 
 @keyframes myFilter {
