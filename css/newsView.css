@@ -2,6 +2,13 @@
     padding: 0px;
     margin: 0px;
 }
+
+.all{
+    width: 930px;
+    height: 1680px;
+    border-bottom: #761818 1px;
+    background-color: aqua;
+}
 #news{
     width: 100%;
     height: 102px;
