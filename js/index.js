@@ -1,5 +1,4 @@
 window.onload = function () {
-  var ul = document.getElementsByClassName("lunbo1")[0];
   var liList = ul.children;
   var liListLength = liList.length;
   var count = 0;
