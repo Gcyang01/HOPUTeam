@@ -403,3 +403,18 @@
     line-height: 26px;
     font-size: 14px;
 }
+/* 调整地图 */
+.layui-layer{
+    height: 450px !important;
+    /* border: solid 1px; */
+}
+
+.layui-layer-close{
+    /* border: solid 1px; */
+    position: absolute;
+    top: -18px !important;
+    left: -985px;
+    background:url(../img/inedximg/close.png) !important;
+    width: 100px !important;
+    height: 40px !important;
+}
