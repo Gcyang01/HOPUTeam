@@ -36,7 +36,7 @@
 <script type="text/javascript">
     var map = new AMap.Map('container', {
         resizeEnable: true,
-        center: [114.404475,30.47746],
+        center: [114.499346,30.554607],
         zoom: 13
     });
 
@@ -49,13 +49,13 @@
     marker.setMap(map);
 
     // 设置鼠标划过点标记显示的文字提示
-    marker.setTitle('我是marker的title');
+    // marker.setTitle('我是marker的title');
 
     // 设置label标签
     // label默认蓝框白底左上角显示，样式className为：amap-marker-label
     marker.setLabel({
         offset: new AMap.Pixel(20, 20),  //设置文本标注偏移量
-        content: "<div class='info'>武汉市洪山区光谷软件园D8栋</div>", //设置文本标注内容
+        content: "<div class='info'>东湖高新开发区春和路花山软件新城二期B13栋</div>", //设置文本标注内容
         direction: 'right' //设置文本标注方位
     });
 </script>
