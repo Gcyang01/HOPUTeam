@@ -4,22 +4,24 @@
     /* border: solid 1px; */
     width: 1820px;
     height: 780px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .lunbo img {
     /* border: solid 1px; */
     height: 780px;
-    /* width: 1380px; */
+    width: 1280px;
     margin-left: 220px;
     animation: myFilter 2s ease 1;
 
 }
 
 .lunbo1 {
-    border: solid 1px red;
+    /* border: solid 1px red; */
+    width: 1700px;
     height: 780px;
-    overflow: hidden;
+    position: relative;
+    /* overflow: hidden; */
 }
 
 .point {
@@ -27,20 +29,22 @@
     height: 140px;
     width: 30px;
     position: absolute;
-    top: 500px;
-    right: 120px;
+    top: 350px;
+    right: 220px;
 }
 
 .point>li {
     border: solid 3px #6c261f;
     border-radius: 50%;
-    margin-top: 10px;
+    margin:40px 0px;
     cursor: pointer;
     width: 16px;
     height: 16px;
 }
 
-.point li:nth-of-type(1) {
+#sub .current{
+    margin-bottom: 80px !important;
+    transition: 0.5s;
     border: solid 3px #491a16;
     background-color: #491a16;
 }
@@ -84,7 +88,8 @@
     height: 72px;
 
 }
-.lis{
+
+.lis {
     display: none;
 }
 
@@ -175,9 +180,11 @@
     height: 724px;
     float: left;
 }
-.solutionimg img{
+
+.solutionimg img {
     animation: myFilter 3s ease 1;
 }
+
 .sol {
     /* border: solid 1px; */
     float: left;
@@ -279,7 +286,8 @@
     height: 116px;
     animation: myFilter 2s ease 1;
 }
-.imglis{
+
+.imglis {
     display: none;
 }
 
@@ -409,18 +417,19 @@
     line-height: 26px;
     font-size: 14px;
 }
+
 /* 调整地图 */
-.layui-layer{
+.layui-layer {
     height: 450px !important;
     /* border: solid 1px; */
 }
 
-.layui-layer-close{
+.layui-layer-close {
     /* border: solid 1px; */
     position: absolute;
     top: -18px !important;
     left: -985px;
-    background:url(../img/inedximg/close.png) !important;
+    background: url(../img/inedximg/close.png) !important;
     width: 100px !important;
     height: 40px !important;
 }

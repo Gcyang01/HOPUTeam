@@ -1,32 +1,95 @@
 window.onload = function () {
-  var ul = document.getElementsByClassName("lunbo1")[0];
-  var liList = ul.children;
-  var liListLength = liList.length;
-  var count = 0;
-  setInterval(() => {
-    if (count + 1 == liListLength) {
-      ul.scrollTop = 0;
-      count = 0;
-    } else {
-      count++;
-      let top = count * 780;
-      var coutBanner = 0;
-
-      //   for (let i = (count - 1) * 780 + 10; i <= top; i++) {
-      //     coutBanner++;
-      //     setTimeout(() => {
-      //       ul.scrollTop = i;
-      //     }, coutBanner * 10);
-      //   }
-      ul.scrollTop = top;
-    }
-  }, 1000);
   lis[0].style.display = "block";
   imgs[0].style.display = "block";
 
+  // 轮播图
+  var box = document.getElementsByClassName("lunbo1")[0];
+  var pics = document.getElementById("pics");
+  var imgss = pics.getElementsByTagName("li");
+  var sub = document.getElementById("sub");
+  var subs = sub.children;
 
+  var minSpeed = 10; //步长，top增加或减少的数
+  var imgtop = pics.scrollTop;
+
+  var nextTimer;
+  var type = true;
+  // console.log(imgtop);
+  //给图片或圆点定义自定义属性
+  for (var i = 0; i < imgs.length; i++) {
+    imgss[i].index = i;
+    subs[i].index = i;
+  }
+  //1.上切
+  function up() {
+    if (type) {
+      imgtop = 0;
+      clearInterval(nextTimer);
+      nextTimer = setInterval(nextImg, 1);
+      type = false;
+      changeColor(imgss[1]);
+    }
+  }
+  // 上走
+  function nextImg() {
+    imgtop += minSpeed;
+    pics.style.top = "-" + imgtop + "px";
+    if (imgtop >= imgss[1].offsetTop) {
+      clearInterval(nextTimer);
+      type = true;
+      pics.appendChild(imgss[0]);
+
+      pics.style.top = 0;
+    }
+  }
+
+  // 小圆点
+  function changeColor(target) {
+    for (var i = 0; i < imgss.length; i++) {
+      subs[i].className = "";
+    }
+    // subs[target.index].style.marginBottom = "80px";
+    subs[target.index].className = "current";
+  }
+  //鼠标移入停止轮播
+  box.onmouseover = function () {
+    clearInterval(timer2);
+  };
+  //鼠标移出，继续轮播
+  box.onmouseout = function () {
+    timer2 = setInterval(up, 2000);
+  };
+
+  var timer2 = setInterval(up, 2000);
+
+  var point1 = document.getElementById("point1");
+  var point2 = document.getElementById("point2");
+  var point3 = document.getElementById("point3");
+
+  point1.onmouseover = function () {
+    changeColor(point1);
+    point1.style.transition = "0.5s";
+  };
+  point1.onmouseout = function () {
+    point1.className = "";
+  };
+
+  point2.onmouseover = function () {
+    changeColor(point2);
+    point2.style.transition = "0.5s";
+  };
+  point2.onmouseout = function () {
+    point2.className = "";
+  };
+
+  point3.onmouseover = function () {
+    changeColor(point3);
+    point3.style.transition = "0.5s";
+  };
+  point3.onmouseout = function () {
+    point3.className = "";
+  };
 };
-
 
 window.alert = function (title) {
   var box = document.getElementById("alert_box");
@@ -44,9 +107,9 @@ window.alert = function (title) {
   div.style.display = "block";
   document.body.appendChild(div);
   div.innerHTML = html;
-  setTimeout(()=>{
-    div.style.display='none'
-  },1500)
+  setTimeout(() => {
+    div.style.display = "none";
+  }, 1500);
 };
 // alert("重写alert方法","设计思路！");
 
@@ -79,10 +142,9 @@ function down() {
   }
 }
 
-
 // 增加减少图片
 var imgs = document.getElementsByClassName("imglis");
-var count2=1
+var count2 = 1;
 function addimg() {
   for (let i = 0; i < imgs.length; i++) {
     imgs[i].style.display = "none";
@@ -96,7 +158,7 @@ function addimg() {
   }
 }
 
-function downimg(){
+function downimg() {
   for (let i = 0; i < imgs.length; i++) {
     imgs[i].style.display = "none";
   }
