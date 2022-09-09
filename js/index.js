@@ -68,27 +68,59 @@ window.onload = function () {
   var point3 = document.getElementById("point3");
 
   point1.onmouseover = function () {
+    if (imgss[0].index == 0) {
+      return;
+    } else if (imgss[0].index == 1) {
+      up();
+      up();
+    } else {
+      up();
+    }
+    clearInterval(timer2);
+    // console.log(imgss[0].index);
     changeColor(point1);
     point1.style.transition = "0.5s";
   };
   point1.onmouseout = function () {
-    point1.className = "";
+    setTimeout(() => {
+      point1.className = "";
+    }, 4000);
   };
 
   point2.onmouseover = function () {
+    if (imgss[0].index == 0) {
+      up();
+    } else if (imgss[0].index == 1) {
+      return;
+    } else {
+      up();
+      up();
+    }
     changeColor(point2);
     point2.style.transition = "0.5s";
   };
   point2.onmouseout = function () {
-    point2.className = "";
+    setTimeout(() => {
+      point2.className = "";
+    }, 4000);
   };
 
   point3.onmouseover = function () {
+    if (imgss[0].index == 0) {
+      up();
+      up();
+    } else if (imgss[0].index == 1) {
+      up();
+    } else {
+      return;
+    }
     changeColor(point3);
     point3.style.transition = "0.5s";
   };
   point3.onmouseout = function () {
-    point3.className = "";
+    setTimeout(() => {
+      point3.className = "";
+    }, 4000);
   };
 };
 
@@ -102,20 +134,20 @@ window.alert = function (title) {
   // if (alertbox) {
   //   //如果窗口中已存在对话框，则直接显示内容
 
-    // alertbox.style.display = "block";
+  // alertbox.style.display = "block";
   // }
   //如果不存在对话框，则创建对话框并显示内容
-    var div = document.createElement("div");
-    div.id = "alert_box";
-    div.style.display = "block";
-    document.body.appendChild(div);
-    div.innerHTML = html;
-    setTimeout(() => {
-      div.style.top = 0;
-      div.style.opacity = "0";
-      div.style.transition = "1s";
-    }, 1500);
-  }
+  var div = document.createElement("div");
+  div.id = "alert_box";
+  div.style.display = "block";
+  document.body.appendChild(div);
+  div.innerHTML = html;
+  setTimeout(() => {
+    div.style.top = 0;
+    div.style.opacity = "0";
+    div.style.transition = "1s";
+  }, 1500);
+};
 
 //新闻增加 减少
 const lis = document.getElementsByClassName("lis");
