@@ -1,6 +1,7 @@
 window.onload = function () {
   lis[0].style.display = "block";
   imgs[0].style.display = "block";
+  maps[0].style.display = "block";
 
   // 轮播图
   var box = document.getElementsByClassName("lunbo1")[0];
@@ -16,7 +17,7 @@ window.onload = function () {
   var type = true;
   // console.log(imgtop);
   //给图片或圆点定义自定义属性
-  for (var i = 0; i < imgs.length; i++) {
+  for (var i = 0; i < imgss.length; i++) {
     imgss[i].index = i;
     subs[i].index = i;
   }
@@ -91,27 +92,30 @@ window.onload = function () {
   };
 };
 
+// alert("重写alert方法","设计思路！");
 window.alert = function (title) {
-  var box = document.getElementById("alert_box");
+  // var alertbox = document.getElementById("alert_box");
   var html = `<dl>
   <dd></dd>
    <span>${title}</span> 
   </dl>`;
-  // if(box){//如果窗口中已存在对话框，则直接显示内容
-  //     box.innerHTML=html;
-  //     box.style.display="block";
+  // if (alertbox) {
+  //   //如果窗口中已存在对话框，则直接显示内容
+
+    // alertbox.style.display = "block";
   // }
   //如果不存在对话框，则创建对话框并显示内容
-  var div = document.createElement("div");
-  div.id = "alert_box";
-  div.style.display = "block";
-  document.body.appendChild(div);
-  div.innerHTML = html;
-  setTimeout(() => {
-    div.style.display = "none";
-  }, 1500);
-};
-// alert("重写alert方法","设计思路！");
+    var div = document.createElement("div");
+    div.id = "alert_box";
+    div.style.display = "block";
+    document.body.appendChild(div);
+    div.innerHTML = html;
+    setTimeout(() => {
+      div.style.top = 0;
+      div.style.opacity = "0";
+      div.style.transition = "1s";
+    }, 1500);
+  }
 
 //新闻增加 减少
 const lis = document.getElementsByClassName("lis");
@@ -150,7 +154,7 @@ function addimg() {
     imgs[i].style.display = "none";
   }
   if (count2 < imgs.length) {
-    imgs[count1].style.display = "block";
+    imgs[count2].style.display = "block";
     count2++;
   } else {
     imgs[imgs.length - 1].style.display = "block";
@@ -168,5 +172,32 @@ function downimg() {
   } else {
     imgs[0].style.display = "block";
     alert("已经是第一页了!");
+  }
+}
+
+// 增加减少地图
+var maps = document.getElementsByClassName("map_address");
+var count3 = 1;
+function addMap() {
+  for (let i = 0; i < maps.length; i++) {
+    maps[i].style.display = "none";
+  }
+  if (count3 < maps.length) {
+    maps[count3].style.display = "block";
+    count3++;
+  } else {
+    maps[maps.length - 1].style.display = "block";
+  }
+}
+
+function downMap() {
+  for (let i = 0; i < maps.length; i++) {
+    maps[i].style.display = "none";
+  }
+  if (count3 > 1) {
+    count3--;
+    maps[count3 - 1].style.display = "block";
+  } else {
+    maps[0].style.display = "block";
   }
 }

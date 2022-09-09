@@ -161,10 +161,14 @@
     transition: all 1.3s;
 
 }
+#button1{
+    margin-left: -4px;
+}
 
 .btn button:nth-of-type(2):hover {
     background-color: rgb(230, 222, 222);
     color: #761818;
+    border: 1px transparent solid;
     transition: all 1s;
 }
 
@@ -267,11 +271,11 @@
 }
 
 .partner_img {
-    width: 1200px;
-    height: 236px;
+    width: 1202px;
+    height: 238px;
     margin-left: 220px;
     margin-top: 110px;
-    border: solid 1px #ccd4db;
+    /* border: solid 1px #ccd4db; */
 }
 
 .partner_img li {
@@ -284,11 +288,16 @@
 .partner_img li img {
     width: 198px;
     height: 116px;
+}
+#imglis1 li img{
     animation: myFilter 2s ease 1;
+
 }
 
 .imglis {
     display: none;
+    height: 236px;
+    border: solid 1px #ccd4db;
 }
 
 @keyframes myFilter {
@@ -376,10 +385,12 @@
 
 .map_ul {
     /* border: solid 1px; */
-    width: 410px;
-    height: 250px;
+    cursor: pointer;
+    width: 1100px;
+    height: 300px;
     margin-top: 64px;
     margin-left: 140px;
+    position: relative;
 }
 
 .map_ul li {
@@ -416,6 +427,43 @@
     height: 26px;
     line-height: 26px;
     font-size: 14px;
+}
+
+.map_left,.map_right{
+    width: 36px;
+    cursor: pointer;
+    height: 36px;
+    border-radius: 50%;
+    border: 0;
+    opacity: 0.5;
+    color: white;
+    background-color: #bcc2ca;
+    position: absolute;
+    top: 130px;
+}
+.map_address{
+    display: none;
+}
+.map_left{
+    opacity: 0;
+    left: 0;
+}
+.map_right{
+    opacity: 0;
+    right: 0px;
+}
+.map_ul:hover .map_right{
+    opacity: 0.5;
+    right: 30px;
+    transition: 0.5s;
+}
+.map_ul:hover .map_left{
+    opacity: 0.5;
+    left: 30px;
+    transition: 0.5s;
+}
+.map_right:hover,.map_left:hover{
+    opacity: 1 !important;
 }
 
 /* 调整地图 */
