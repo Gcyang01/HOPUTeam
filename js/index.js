@@ -94,7 +94,6 @@ window.onload = function () {
 
 // alert("重写alert方法","设计思路！");
 window.alert = function (title) {
-  var top = '50px';
   // var alertbox = document.getElementById("alert_box");
   var html = `<dl>
   <dd></dd>
@@ -102,7 +101,7 @@ window.alert = function (title) {
   </dl>`;
   // if (alertbox) {
   //   //如果窗口中已存在对话框，则直接显示内容
-  
+
     // alertbox.style.display = "block";
   // }
   //如果不存在对话框，则创建对话框并显示内容
