@@ -92,27 +92,31 @@ window.onload = function () {
   };
 };
 
+// alert("重写alert方法","设计思路！");
 window.alert = function (title) {
-  var box = document.getElementById("alert_box");
+  var top = '50px';
+  // var alertbox = document.getElementById("alert_box");
   var html = `<dl>
   <dd></dd>
    <span>${title}</span> 
   </dl>`;
-  // if(box){//如果窗口中已存在对话框，则直接显示内容
-  //     box.innerHTML=html;
-  //     box.style.display="block";
+  // if (alertbox) {
+  //   //如果窗口中已存在对话框，则直接显示内容
+  
+    // alertbox.style.display = "block";
   // }
   //如果不存在对话框，则创建对话框并显示内容
-  var div = document.createElement("div");
-  div.id = "alert_box";
-  div.style.display = "block";
-  document.body.appendChild(div);
-  div.innerHTML = html;
-  setTimeout(() => {
-    div.style.display = "none";
-  }, 1500);
-};
-// alert("重写alert方法","设计思路！");
+    var div = document.createElement("div");
+    div.id = "alert_box";
+    div.style.display = "block";
+    document.body.appendChild(div);
+    div.innerHTML = html;
+    setTimeout(() => {
+      div.style.top = 0;
+      div.style.opacity = "0";
+      div.style.transition = "1s";
+    }, 1500);
+  }
 
 //新闻增加 减少
 const lis = document.getElementsByClassName("lis");

@@ -161,10 +161,14 @@
     transition: all 1.3s;
 
 }
+#button1{
+    margin-left: -4px;
+}
 
 .btn button:nth-of-type(2):hover {
     background-color: rgb(230, 222, 222);
     color: #761818;
+    border: 1px transparent solid;
     transition: all 1s;
 }
 
@@ -284,7 +288,10 @@
 .partner_img li img {
     width: 198px;
     height: 116px;
+}
+#imglis1 li img{
     animation: myFilter 2s ease 1;
+
 }
 
 .imglis {
