@@ -3,12 +3,147 @@
     margin: 0px;
 }
 #partner{
+    /* border: solid 1px; */
     width: 100%;
-    height: 102px;
-    margin-top: -20px;
-    position: absolute;
+    margin: auto;
+    height: 130px;
 }
 #partner>img{
-    width: 96%;
-    margin-left: 2%;
+    width: 88%;
+    margin-left: 6%;
+}
+#nav_partner{
+    border-bottom: 1px solid #666 ;
+    width: 87%;
+    margin-left: 6.5%;
+    height: 80px;
+}
+#nav_partner span{
+    display: inline-block;
+    height: 77px;
+    font-size: 15px;
+    line-height: 40px;
+    border-bottom: solid 3px rgb(110, 37, 37); 
+    width: 70px;
+    margin-left: 280px;
+}
+.partner_box{
+    position: relative;
+    margin-top: 80px;
+    /* border: solid 1px; */
+    width: 1520px;
+    height: 704px;
+    background-color: #f7f6f7;
+    margin-bottom: 120px;
+}
+.partner_ul{
+    /* border: solid 1px; */
+    margin-left: 724px;
+    height: 704px;
+    width: 106px;
+}
+.partner_ul li{
+    cursor: pointer;
+    /* border-top: solid 1px; */
+    width: 106px;
+    height: 88px;
+}
+.partner_ul li:hover{
+    background-color: #ecf0f5;
+}
+.active{
+    background-color:#ecf0f5 ;
+}
+.partner_ul li img {
+    margin-top: 30px;
+    margin-left: 38px;
+}
+.partner_right{
+    position: absolute;
+    /* border: solid 1px; */
+    width: 690px;
+    height: 704px;
+    background-color: #ecf0f5;
+    top:0px;
+    right: 0px;
+}
+.partner_right>li{
+    width: 686px;
+    height: 704px;
+    display: none;
+}
+.text{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    margin-left: 70px;
+}
+.partner_right>li::before{
+    content: "";
+    display: inline-block;
+    height: 24px;
+    width: 4px;
+    position: relative;
+    top: 35px;
+    left: 46px;
+    background-color: black;
+}
+
+.right_ul{
+    /* border: solid 1px #999; */
+     width: 600px;
+     margin-top: 12px;
+    margin-left: 46px;
+    height: 240px;
+}
+.right_ul li{
+    float: left;
+    border: solid 1px #999;
+    width: 198px;
+    height: 118px;
+}
+.right_ul li img{
+    width: 100%;
+    height: 100%;
+    animation: filter1 2.5s ease 1;
+}
+
+@keyframes filter1{
+    0%{
+        filter: blur(5px);
+    }
+    50%{
+        filter: blur(2px);
+    }
+    100%{
+        filter: blur(0px);
+    }
+}
+
+#li8::before{
+    display: none;
+}
+
+/* 右边回到顶部 */
+
+.top1{
+    display: none;
+}
+
+.top_fixed{
+    height: 70px;
+    width: 48px;
+    background: url(../img/partnerViewImg/top.png) no-repeat;
+    position: fixed;
+    top: 750px;
+    right: 300px;
+}
+.top_abs{
+    height: 70px;
+    width: 48px;
+    background: url(../img/partnerViewImg/top.png) no-repeat;
+    position: absolute;
+    top: 1170px;
+    right: 300px;
 }
