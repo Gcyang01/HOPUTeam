@@ -14,7 +14,7 @@
 
 .logo {
     /* border: solid 1px; */
-    width: 610px;
+    width: 570px;
     height: 100%;
     float: left;
     position: relative;
@@ -30,7 +30,7 @@
     /* border: solid 1px; */
     width: 850px;
     float: left;
-    margin-left: 120px;
+    margin-left: 135px;
     height: 100%;
 }
 
@@ -44,5 +44,5 @@
 .nav li a {
     line-height: 160px;
     color: #333;
-    font-size: 16px;
+    font-size: 15px;
 }

@@ -344,6 +344,11 @@
     height: 22px;
 }
 
+.more_text a{
+    color: #333;
+}
+
+
 /* 联系我们 */
 #bottom {
     top: 0px !important;

@@ -96,13 +96,14 @@ window.onload = function () {
       up();
       up();
     }
+    clearInterval(timer2);
     changeColor(point2);
     point2.style.transition = "0.5s";
   };
   point2.onmouseout = function () {
     setTimeout(() => {
       point2.className = "";
-    }, 4000);
+    }, 2000);
   };
 
   point3.onmouseover = function () {
@@ -114,6 +115,7 @@ window.onload = function () {
     } else {
       return;
     }
+    clearInterval(timer2);
     changeColor(point3);
     point3.style.transition = "0.5s";
   };
