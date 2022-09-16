@@ -14,8 +14,8 @@ window.onload = function () {
   var imgtop = pics.scrollTop;
 
   var nextTimer;
+  var timer2;
   var type = true;
-  // console.log(imgtop);
   //给图片或圆点定义自定义属性
   for (var i = 0; i < imgss.length; i++) {
     imgss[i].index = i;
@@ -39,7 +39,33 @@ window.onload = function () {
       clearInterval(nextTimer);
       type = true;
       pics.appendChild(imgss[0]);
+      pics.style.top = 0;
+    }
+  }
 
+  //下切
+  function down() {
+    if (type) {
+      imgtop = imgss[0].offsetTop;
+      clearInterval(nextTimer);
+      nextTimer = setInterval(lastImg, 1);
+      type = false;
+      // 小圆点变为前一个的颜色
+      changeColor(imgss[2]);
+      // 这里把最后一张添加到第一张
+      pics.insertBefore(imgss[2], imgss[0]);
+    }
+  }
+  // 下走
+  function lastImg() {
+    console.log(imgss[0].offsetTop);
+    imgtop -= minSpeed;
+    pics.style.top = -imgtop + "px";
+    console.log(imgtop);
+    if (imgtop <= -780) {
+      clearInterval(nextTimer);
+      type = true;
+      
       pics.style.top = 0;
     }
   }
@@ -49,7 +75,6 @@ window.onload = function () {
     for (var i = 0; i < imgss.length; i++) {
       subs[i].className = "";
     }
-    // subs[target.index].style.marginBottom = "80px";
     subs[target.index].className = "current";
   }
   //鼠标移入停止轮播
@@ -61,7 +86,7 @@ window.onload = function () {
     timer2 = setInterval(up, 2000);
   };
 
-  var timer2 = setInterval(up, 2000);
+  timer2 = setInterval(up, 2000);
 
   var point1 = document.getElementById("point1");
   var point2 = document.getElementById("point2");
@@ -71,20 +96,18 @@ window.onload = function () {
     if (imgss[0].index == 0) {
       return;
     } else if (imgss[0].index == 1) {
-      up();
-      up();
+      down();
     } else {
       up();
     }
     clearInterval(timer2);
-    // console.log(imgss[0].index);
     changeColor(point1);
     point1.style.transition = "0.5s";
   };
   point1.onmouseout = function () {
     setTimeout(() => {
       point1.className = "";
-    }, 4000);
+    }, 2000);
   };
 
   point2.onmouseover = function () {
@@ -93,8 +116,7 @@ window.onload = function () {
     } else if (imgss[0].index == 1) {
       return;
     } else {
-      up();
-      up();
+      down()
     }
     clearInterval(timer2);
     changeColor(point2);
@@ -108,8 +130,7 @@ window.onload = function () {
 
   point3.onmouseover = function () {
     if (imgss[0].index == 0) {
-      up();
-      up();
+      down()
     } else if (imgss[0].index == 1) {
       up();
     } else {
@@ -122,22 +143,17 @@ window.onload = function () {
   point3.onmouseout = function () {
     setTimeout(() => {
       point3.className = "";
-    }, 4000);
+    }, 2200);
   };
 };
 
 // alert("重写alert方法","设计思路！");
 window.alert = function (title) {
-  // var alertbox = document.getElementById("alert_box");
   var html = `<dl>
   <dd></dd>
    <span>${title}</span> 
   </dl>`;
-  // if (alertbox) {
-  //   //如果窗口中已存在对话框，则直接显示内容
 
-  // alertbox.style.display = "block";
-  // }
   //如果不存在对话框，则创建对话框并显示内容
   var div = document.createElement("div");
   div.id = "alert_box";
