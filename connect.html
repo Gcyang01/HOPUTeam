@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>厚溥·IT</title>
-    <link rel="stylesheet" href="./css/newsView.css">
+    <title>厚溥IT</title>
     <link rel="stylesheet" href="./css/top.css">
     <link rel="stylesheet" href="./css/bottom.css">
-    <link rel="icon" href="./img/favicon.ico"> 
+    <link rel="stylesheet" href="./css/connect.css">
+    <script src="./js/jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="./js/layer/layer.js"></script>
+    <script src="./js/connect.js"></script>
 </head>
+
 <body>
     <!-- 头部导航 -->
     <div class='top'>
@@ -20,78 +24,55 @@
             <li><a href="index.html">首页</a> </li>
             <li><a href="newsView.html">新闻</a> </li>
             <li><a href="partnerView.html">合作伙伴</a> </li>
-            <li><a href="#">解决方案</a> </li>
+            <li><a href="">解决方案</a> </li>
             <li><a href="social.html">社会责任</a> </li>
             <li><a href="connect.html">联系方式</a> </li>
             <li><a href="#">简 / 繁 / EN</a> </li>
         </ul>
     </div>
+    <div id="partner">
+        <img src="./img/connectImg/cont.a051b429.png" />
+    </div>
 
-    <!-- 集团新闻 -->
-    <div class="center">
-        <div class="news_img">
-            <img src="img/newsViewImg/cont.a051b429.png" />
-        </div>
-        <div class="newsMenu">
-            <ul>
-                <a href="newsView.html"><li>集团新闻</li></a>
-                <a href="newsView2.html"><li>分子公司新闻</li></a>
+    <!-- 联系方式 -->
+    <div id="nav_partner">
+        <span>联系方式</span>
+    </div>
+    <div class="partner_box">
+        <div class="map">
+            <ul class="map_ul">
+                <li onclick="addMap0()">
+                    <img src="./img/connectImg/footer-3.a59ae0a2.png" alt="">
+                    <p>湖北<span class="dian">·</span>武汉</span>
+                    <p> 洪山区关山大道特1号光谷软件园D8栋 </span>
+                </li>
+                <li onclick="addMap1()">
+                    <img src="./img/connectImg/footer-3.a59ae0a2.png" alt="">
+                    <p></p>
+                    <p> 东湖高新开发区春和路花山软件新城二期B13栋</span>
+                </li>
+                <li onclick="addMap2()">
+                    <img src="./img/connectImg/footer-3.a59ae0a2.png" alt="">
+                    <p>江苏<span class="dian">·</span>扬州</span>
+                    <p> 江都区龙诚路174号 </span>
+                </li>
+
+                <li onclick="addMap3()">
+                    <img src="./img/connectImg/footer-3.a59ae0a2.png" alt="">
+                    <p>陕西<span class="dian">·</span>西安</span>
+                    <p> 高新区西安国家数字出版基地B栋404、405室 </span>
+                </li>
             </ul>
-        </div>
-        <span></span>
-        <div class="container">
-            <div class="container_container">
-                <div class="news_panel">
-                    <div class="news_panel_left">
-                        <div class="news_panel_left_img">
-                            <img src="" alt="">
-                            <div>
-                                <div></div>
-                                <div>2022-08-20</div>
-                                <div>公司被认定为湖北省第二批产教融合型企业</div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="news_panel_right">
-                        <div>
-                            <div>
-                                <div>2022-08-20</div>
-                                <a href="">
-                                    <div>公司被认定为湖北省第二批产教融合型企业</div>
-                                </a>
-                            </div>
-                            <div>
-                                <div>2022-06-24</div>
-                                <a href="">
-                                    <div>腾讯云、湖北师范大学文理学院与厚溥共建腾讯云大数据产业学院</div>
-                                </a>
-                            </div>
-                            <div>
-                                <div>2022-06-17</div>
-                                <a href="">
-                                    <div>武昌首义学院、腾讯云与厚溥共建腾讯云产业学院</div>
-                                </a>
-                            </div>
-                            <div>
-                                <div>2022-04-12</div>
-                                <a href="">
-                                    <div>厚溥被认定为省级专精特新“小巨人”企业</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="news_panel_right_button">
-                            <button>&gt;</button>
-                            <button>&lt;</button>
-                        </div>
-                    </div>
-                </div>
-                
-                </div>
-            </div>
         </div>
     </div>
-    
+
+
+
+    <div id="top" class="top1" onclick="top1()">
+
+    </div>
+
 
     <!-- 底部 -->
     <div id="bottom">
@@ -159,10 +140,60 @@
                 </p>
             </div>
             <div class="bottom_bottom">
-                <span>copyright @ 2020-2030 武汉厚溥数字科技有限公司ALL RIGHTS RESERVED.<i>鄂ICP备11005077号</i></span> 
+                <span>copyright @ 2020-2030 武汉厚溥数字科技有限公司ALL RIGHTS RESERVED.<i>鄂ICP备11005077号</i></span>
                 <span>鄂网安备44030502002037号</span>
             </div>
         </div>
     </div>
+
+
+
+    <!-- 导入地图js 利用jquery 和 layer   利用vue插入数据-->
+    <script>
+      
+        // 地图1
+        function addMap0() {
+            layer.open({
+                type: 2,
+                title: '',
+                maxmin: false,
+                shadeClose: true,
+                area: ['1000px', '500px'],
+                content: './map/map.html'
+            });
+        }
+        function addMap1() {
+            layer.open({
+                type: 2,
+                title: '',
+                maxmin: false,
+                shadeClose: true,
+                area: ['1000px', '500px'],
+                content: './map/map1.html'
+            });
+        }
+        function addMap2() {
+            layer.open({
+                type: 2,
+                title: '',
+                maxmin: false,
+                shadeClose: true,
+                area: ['1000px', '500px'],
+                content: './map/map2.html'
+            });
+        }
+        function addMap3() {
+            layer.open({
+                type: 2,
+                title: '',
+                maxmin: false,
+                shadeClose: true,
+                area: ['1000px', '500px'],
+                content: './map/map3.html'
+            });
+        }
+
+    </script>
 </body>
+
 </html>
