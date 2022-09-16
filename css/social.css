@@ -1,23 +1,21 @@
 .all{
     /* border: solid 1px; */
     height: 900px;
+    margin: 0 auto;
+    width: 90%;
 }
-
 .dakuang{
-    width: 100%;
-    min-height: 800px;
+    width: 72%;
+    min-height: 630px;
     border-right:1px solid #e1e1e1;
-    margin-top: 50px;
+    padding-top: 50px;
 }
-
 #tu1{
     max-width: 1682px;
     width: 100%;
-    margin-bottom: 35px;
     height: 200px;
     border-bottom:1px solid #e1e1e1;
 }
-
 #tu1>a{
     width: 64px;
     height: 90px;
@@ -29,8 +27,6 @@
     padding-bottom: 3px;
     font-size: 14px;
 }
-
-
 #renwu{
     margin-left: 20px;
     font-family: STXihei;
@@ -38,8 +34,6 @@
     line-height: 24px;
     
 }
-
-
 #tu2{
     margin-left: 20px;
 }
